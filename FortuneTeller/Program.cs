@@ -84,14 +84,12 @@ namespace FortuneTeller
                 placeToLive = "Cardboard box in Save-A-Lot";
             }
             //cars for colors
-            string sweetCars
+            string sweetCars;
             switch (lowerRoygbiv)
             {
                 case "red":
                     sweetCars = "Lambo";
                     break;
-
-
                 case "orange":
                     sweetCars = "Hummer";
                     break;
@@ -110,53 +108,35 @@ namespace FortuneTeller
                 case "violet":
                     sweetCars = "Limo";
                     break;
-                    // determining money for birthmonth
-                    string dollars;
-                    if (birthMonth >= 1 && birthMonth <= 4)
-                    {
-                        dollars = "$100,000";
-                
-                    }
-                    else if (birthMonth == 5 && birthMonth <=8)
-                    {
-                        dollars = "$300,000";
-                    }
-                    else if (birthMonth == 9 && birthMonth <= 12
-                        {
-                        dollars = "$500,000";
-                    }
-                    else
-                    {
-                        dollars = "$0.00";
-                    }
-                    Console.WriteLine("Thank you for your info!");
-                    Console.WriteLine("Here is your Future!");
-                    Console.WriteLine(firstName " " + lastName)
-                       
+                default:
+                    sweetCars = "none";
+                    break;     
+            }
+            // determining money for birthmonth
+            string dollars;
+            if (birthMonth >= 1 && birthMonth <= 4)
+            {
+                dollars = "$100,000";
 
-                 
-
+            }
+            else if (birthMonth == 5 && birthMonth <= 8)
+            {
+                dollars = "$300,000";
+            }
+            else if (birthMonth == 9 && birthMonth <= 12)
+            {
+                dollars = "$500,000";
+            }
+            else
+            {
+                dollars = "$0.00";
+            }
+            //Output for fortune teller
+            Console.WriteLine("Thank you for your info!");
+            Console.WriteLine("Here is your Future!");
+            Console.WriteLine(firstName + " " + lastName + " will retire in " + retirementAge + " years with " + dollars + " in the bank, a vacation home in " + placeToLive + " and a " + sweetCars + ".");
             
-                
-
-
-            
-                
-            
-            
-
-
-            
-              
-            
-            
-            
-
-            } 
-
-
-
-                
-        }
+        } 
     }
+}
 
