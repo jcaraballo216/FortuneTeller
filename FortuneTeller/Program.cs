@@ -12,14 +12,6 @@ namespace FortuneTeller
         {
             //Fortune Teller
 
-            //Ask the user for the user’s first name
-            //Ask the user for the user’s last name
-            //Ask the user for the user’s age
-            //Ask the user for the user’s birth month(as an 'int')
-            //Ask the user for the user’s favorite ROYGBIV color
-            //If the user does not know what ROYGBIV is, ask them to enter “Help” to get a list of the ROYGBIV colors
-            //Ask the user for the number of siblings they have
-
             //Asking user for information and calculating output.
 
             Console.WriteLine("Welcome to Fortune Teller!");
@@ -34,19 +26,23 @@ namespace FortuneTeller
             Console.WriteLine("Please enter your birth month as a two digit month.");
             int birthMonth = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter your favorite ROYGBIV. Type \"Help\" if you do not know ROYGBIV.");
+
             //Help content output
-            string roygbiv = Console.ReadLine();
-            string lowerRoygbiv = roygbiv.ToLower();
-            if (lowerRoygbiv == "help")
+
+            string colors = Console.ReadLine();
+            string lowerColors = colors.ToLower();
+            if (lowerColors == "help")
             {
                 Console.WriteLine("ROYGBIV means Red,Orange,Yellow,Green,Blue,Indigo,Violet");
-                roygbiv = Console.ReadLine();
+                colors = Console.ReadLine();
             }
-            lowerRoygbiv = roygbiv.ToLower();
+            lowerColors = colors.ToLower();
             Console.WriteLine("How many siblings do you have?");
             int siblings = int.Parse(Console.ReadLine());
+
             //calculations for prt 3 output
             //age
+
             int ageEven = age % 2;
             int retirementAge;
             if (ageEven == 0)
@@ -57,8 +53,10 @@ namespace FortuneTeller
             {
                 retirementAge = 15;
             }
+
             string placeToLive;
             //siblings and places to live
+
             if (siblings == 0)
             {
                 placeToLive = "Puerto Rico";
@@ -84,8 +82,9 @@ namespace FortuneTeller
                 placeToLive = "Cardboard box in Save-A-Lot";
             }
             //cars for colors
+
             string sweetCars;
-            switch (lowerRoygbiv)
+            switch (lowerColors)
             {
                 case "red":
                     sweetCars = "Lambo";
@@ -112,6 +111,7 @@ namespace FortuneTeller
                     sweetCars = "none";
                     break;     
             }
+            
             // determining money for birthmonth
             string dollars;
             if (birthMonth >= 1 && birthMonth <= 4)
@@ -131,7 +131,9 @@ namespace FortuneTeller
             {
                 dollars = "$0.00";
             }
+
             //Output for fortune teller
+
             Console.WriteLine("Thank you for your info!");
             Console.WriteLine("Here is your Future!");
             Console.WriteLine(firstName + " " + lastName + " will retire in " + retirementAge + " years with " + dollars + " in the bank, a vacation home in " + placeToLive + " and a " + sweetCars + ".");
