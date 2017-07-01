@@ -138,6 +138,11 @@ namespace FortuneTeller
             Console.WriteLine("Here is your Future!");
             Console.WriteLine(firstName + " " + lastName + " will retire in " + retirementAge + " years with " + dollars + " in the bank, a vacation home in " + placeToLive + " and a " + sweetCars + ".");
             
+            //Stretch Task
+            //google search needed
+            //code was attempted in the begining of the program
+            //while loop tried and not functional
+            //Need more help
         } 
     }
 }
