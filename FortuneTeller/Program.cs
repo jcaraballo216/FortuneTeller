@@ -136,7 +136,7 @@ namespace FortuneTeller
 
             Console.WriteLine("Thank you for your info!");
             Console.WriteLine("Here is your Future!");
-            Console.WriteLine(firstName + " " + lastName + " will retire in " + retirementAge + " years with " + dollars + " in the bank, a vacation home in " + placeToLive + " and a " + sweetCars + ".");
+            Console.WriteLine(firstName + " " + lastName + " will retire in " + retirementAge + " years with " + dollars + " in the bank, \na vacation home in " + placeToLive + " and a " + sweetCars + ".");
             
             //Stretch Task
             //google search needed
